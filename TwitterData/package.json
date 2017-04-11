@@ -1,0 +1,27 @@
+{
+  "name": "TwitterData",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "read": "nodemon read.js"
+  },
+  "dependencies": {
+    "express": "4.13.x",
+    "fs": "0.0.2",
+    "highcharts": "^5.0.5",
+    "http": "0.0.0",
+    "line-reader": "^0.4.0",
+    "twit": "^2.2.5",
+    "util": "^0.10.3"
+  },
+  "repository": {},
+  "engines": {
+    "npm": "3.x",
+    "node": "4.x"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
