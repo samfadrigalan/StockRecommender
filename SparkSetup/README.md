@@ -1,6 +1,6 @@
 # SparkSetup
 ## AWS EMR(Elastic Map Reduce) Spark instance
-### Connection to Instance
+### Connect to master
 1. Download our aws key `stocks-key.pem`. The key is sometimes renamed to `stocks-key.pem.txt`, so make sure to rename it back with just the extension `.pem`.
 2. Copy the key to the ~/.ssh folder.
 ```
@@ -24,7 +24,7 @@ ssh -i ~/.ssh/stocks-key.pem hadoop@ec2-34-209-202-172.us-west-2.compute.amazona
 ### View Web Interfaces Hosted on AWS EMR
 The security group for the master node needs to be modified to be able to view the Web UI. Go to the [EMR instance console](https://us-west-2.console.aws.amazon.com/elasticmapreduce/home?region=us-west-2#cluster-details:j-DSGOARB26PVS) and click on the link for **Security groups for master**. Edit the inbound rules for the master. Add a rule with **Type**: All Traffic and **Source**: My IP. This will enable Web UI viewing for your current IP address. To allow access from any IP address, choose "Any" for **Source**.
 #### Web Interfaces URLs
-|Name of interface  |URI                                                                |
+|Name of interface  |URL                                                                |
 |:----------------  |:----------------------------------------------------------------- |
 |Spark HistoryServer| http://ec2-34-209-202-172.us-west-2.compute.amazonaws.com:18080/  |
 
