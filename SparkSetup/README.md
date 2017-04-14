@@ -1,4 +1,4 @@
-# README
+# SparkSetup
 ## Connect to AWS EMR Instance with Spark
 1. Download our aws key `stocks-key.pem`. The key is sometimes renamed to `stocks-key.pem.txt`, so make sure to rename it back with just the extension `.pem`.
 2. Copy the key to the ~/.ssh folder.
