@@ -14,7 +14,7 @@ chmod 400 ~/.ssh/stocks-key.pem
   * Under **Security and Access**, click on the value for **Security groups for Master**.
   * Click on the **ElasticMapReduce-master** group.
   * Click the **Actions** drop down and **Edit inbound rules**.
-  * Add a rule with **Type**: SSH, **Port Range**: 22, and **Source** My IP.
+  * Add a rule with **Type**: SSH, **Port Range**: 22, and **Source**: My IP.
   * **NOTE:** You will have to do Step 4 every time your IP address changes.
 5. Go back to the [instance console](https://us-west-2.console.aws.amazon.com/elasticmapreduce/home?region=us-west-2#cluster-details:j-2889D5UKY0E5L) and click on the **SSH** beside the **Master public DNS** to view the instructions to connect via SSH using Mac/Linux or Windows. If connecting via Mac/Linux, make sure to change the location of the key for the ssh command.
 ```
