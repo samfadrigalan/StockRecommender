@@ -24,9 +24,13 @@ ssh -i ~/.ssh/stocks-key.pem hadoop@ec2-34-209-202-172.us-west-2.compute.amazona
 ### View Web Interfaces Hosted on AWS EMR
 The security group for the master node needs to be modified to be able to view the Web UI. Go to the [EMR instance console](https://us-west-2.console.aws.amazon.com/elasticmapreduce/home?region=us-west-2#cluster-details:j-DSGOARB26PVS) and click on the link for **Security groups for master**. Edit the inbound rules for the master. Add a rule with **Type**: All Traffic and **Source**: My IP. This will enable Web UI viewing for your current IP address. To allow access from any IP address, choose "Any" for **Source**.
 #### Web Interfaces URLs
-|Name of interface  |URL                                                                |
-|:----------------  |:----------------------------------------------------------------- |
-|Spark HistoryServer| http://ec2-34-209-202-172.us-west-2.compute.amazonaws.com:18080/  |
-
+|Name of interface  |URL                                                                  |
+|:----------------  |:------------------------------------------------------------------- |
+|YARN ResourceManager | http://master-public-dns-name:8088/                               |
+|YARN NodeManager     | http://slave-public-dns-name:8042/                                |
+|Hadoop HDFS NameNode	| http://master-public-dns-name:50070/                              |
+|Hadoop HDFS DataNode	| http://slave-public-dns-name:50075/                               |
+|Spark HistoryServer  | http://ec2-34-209-202-172.us-west-2.compute.amazonaws.com:18080/  |
+|HBase UI             | http://master-public-dns-name:16010/                              |
 
 For a complete list of URLs, go this [Amazon EMR guide](http://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-web-interfaces.html).
