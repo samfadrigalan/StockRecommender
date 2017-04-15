@@ -26,11 +26,11 @@ The security group for the master node needs to be modified to be able to view t
 #### Web Interfaces URLs
 |Name of interface  |URL                                                                  |
 |:----------------  |:------------------------------------------------------------------- |
-|YARN ResourceManager | http://master-public-dns-name:8088/                               |
+|YARN ResourceManager | http://ec2-34-209-202-172.us-west-2.compute.amazonaws:8088/       |
 |YARN NodeManager     | http://slave-public-dns-name:8042/                                |
-|Hadoop HDFS NameNode	| http://master-public-dns-name:50070/                              |
+|Hadoop HDFS NameNode	| http://ec2-34-209-202-172.us-west-2.compute.amazonaws:50070/      |
 |Hadoop HDFS DataNode	| http://slave-public-dns-name:50075/                               |
 |Spark HistoryServer  | http://ec2-34-209-202-172.us-west-2.compute.amazonaws.com:18080/  |
-|HBase UI             | http://master-public-dns-name:16010/                              |
+|HBase UI             | http://ec2-34-209-202-172.us-west-2.compute.amazonaws:16010/      |
 
 For a complete list of URLs, go this [Amazon EMR guide](http://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-web-interfaces.html).
