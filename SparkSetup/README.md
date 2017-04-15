@@ -16,7 +16,7 @@ chmod 400 ~/.ssh/stocks-key.pem
   * Click on the **ElasticMapReduce-master** group.
   * Click the **Actions** drop down and **Edit inbound rules**.
   * Add a rule with **Type**: SSH, **Port Range**: 22, and **Source**: My IP.
-  * **NOTE:** You will have to do Step 4 every time your IP address changes.
+  * **NOTE:** You will have to do Step 4 every time your IP address changes. A common error you would get if the correct rules aren't set is "ssh: connect to host ec2-xx-xxx-xxx-xxx.xx-xx-x.compute.amazonaws.com port 22: Operation timed out".
 5. Go back to the [instance console](https://us-west-2.console.aws.amazon.com/elasticmapreduce/home?region=us-west-2#cluster-details:j-DSGOARB26PVS) and click on the **SSH** beside the **Master public DNS** to view the instructions to connect via SSH using Mac/Linux or Windows. If connecting via Mac/Linux, make sure to access the key at the correct filepath `~/.ssh/stocks-key.pem` for the ssh command.
 ```
 ssh -i ~/.ssh/stocks-key.pem hadoop@ec2-34-209-202-172.us-west-2.compute.amazonaws.com
